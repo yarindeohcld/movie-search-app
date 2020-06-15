@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { NOT_FOUND_PLACEHOLDER } from 'services/general/generalConstants';
+
 export const MovieTile = ({ title, poster, year }) => {
     return (
         <div className="movie">
@@ -10,9 +12,7 @@ export const MovieTile = ({ title, poster, year }) => {
                 className="movie-tile"
                 style={{
                     backgroundImage: `url(${
-                        poster === 'N/A'
-                            ? 'https://placehold.it/198x264&text=Image+Not+Found'
-                            : poster
+                        poster === 'N/A' ? NOT_FOUND_PLACEHOLDER : poster
                     })`,
                     width: 200,
                     height: 300,

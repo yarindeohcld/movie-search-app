@@ -7,11 +7,6 @@ module.exports = {
   testMatch: [
     '<rootDir>/src/**/__tests__/*.{jsx,js}'
   ],
-    transform: {
-        '^.+\\.js$': 'babel-jest',
-        '\\.(jpg|jpeg|png|gif|eot|otf|svg|ttf|woff|woff2)$':
-            '<rootDir>src/services/fileTransformer.js'
-    },
   "moduleFileExtensions": [
     "json",
     "js"

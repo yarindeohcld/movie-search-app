@@ -1,7 +1,12 @@
 import React from 'react';
 
 import 'resources/scss/style.scss';
+import { MoviesView } from 'containers/Movies/MoviesView';
 
 export const App = () => {
-    return <div>test</div>;
+    return (
+        <div>
+            <MoviesView />
+        </div>
+    );
 };

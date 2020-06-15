@@ -3,12 +3,12 @@ import { get } from 'services/restApiUtils';
 
 function baseUrl(path) {
     const restPrefix = Configuration.get('apiPrefix');
-    return `${restPrefix}&s=${path}&page=1`;
+    return `${restPrefix}&${path}`;
 }
 
 const Api = {
-    getMovies: (query) => {
-        return get(baseUrl(query));
+    getMovies: (path) => {
+        return get(baseUrl(path));
     },
 };
 

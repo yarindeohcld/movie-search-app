@@ -1,16 +1,26 @@
 import React from 'react';
 
-function Pagination({ nextPage, previousPage, nextUrl, prevUrl }) {
+export const Pagination = ({
+    nextPage,
+    previousPage,
+    isPrev,
+    isNext,
+    maxPage,
+    currentPage,
+}) => {
     return (
         <div className="pagination">
-            <button onClick={() => previousPage()} disabled={!prevUrl}>
+            <button onClick={() => previousPage()} disabled={isPrev}>
                 {'<'}
             </button>
-            <button onClick={() => nextPage()} disabled={!nextUrl}>
+            {maxPage && (
+                <React.Fragment>
+                    {currentPage} out of {maxPage}
+                </React.Fragment>
+            )}
+            <button onClick={() => nextPage()} disabled={isNext}>
                 {'>'}
             </button>
         </div>
     );
-}
-
-export default Pagination;
+};

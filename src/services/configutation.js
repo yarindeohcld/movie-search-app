@@ -1,6 +1,7 @@
+import { API_URL } from 'services/general/generalConstants';
 const configData = {
     // TODO:: needs to store it under env var -> url and apikey need to be private
-    defaultApiPrefix: 'http://www.omdbapi.com/?apikey=157f34ed',
+    defaultApiPrefix: API_URL,
 };
 
 class Configuration {

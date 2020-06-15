@@ -7,8 +7,9 @@ export const MovieTile = ({ title, poster }) => {
             {/* TODO:: replace with general const */}
             <img
                 src={
-                    poster ||
-                    'https://placehold.it/198x264&text=Image+Not+Found'
+                    poster === 'N/A'
+                        ? 'https://placehold.it/198x264&text=Image+Not+Found'
+                        : poster
                 }
                 style={{ width: 200, height: 300 }}
             />

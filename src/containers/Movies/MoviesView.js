@@ -1,11 +1,21 @@
 import React from 'react';
 
 import { useMovies } from 'containers/Movies/moviesHooks';
+import { Pagination } from 'components/Pagination';
 import { MoviesGrid } from './components/MoviesGrid';
 
 export const MoviesView = () => {
-    const { movies, setQueryRequest } = useMovies();
-    
+    const {
+        movies,
+        setQueryRequest,
+        isPrev,
+        isNext,
+        next,
+        prev,
+        maxPage,
+        currentPage,
+    } = useMovies();
+
     return (
         <div className="movies-view">
             Movies View
@@ -18,6 +28,14 @@ export const MoviesView = () => {
                 />
             </div>
             <MoviesGrid movies={movies} />
+            <Pagination
+                nextPage={next}
+                previousPage={prev}
+                isPrev={isPrev}
+                isNext={isNext}
+                currentPage={currentPage}
+                maxPage={maxPage}
+            />
         </div>
     );
 };

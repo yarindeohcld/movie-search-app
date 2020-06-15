@@ -7,9 +7,19 @@ http://www.omdbapi.com/?apikey=${API_KEY}
 - You can search for a movie by it's title, it's updating when you type.
 - In order to reduce Api calls - added debounce on every 500 ms for the search value.
 
-## Run Locally
+## Quick Use
 
-Run with webpack-dev-server
+Run local with webpack-dev-server
+
+```
+yarn start-dev
+```
+Run webpack build
+
+```
+yarn build
+```
+Run node webserver
 
 ```
 yarn start

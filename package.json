@@ -7,14 +7,13 @@
   "scripts": {
     "start": "webpack-dev-server --mode=development",
     "build": "webpack --mode production",
-    "test": "jest",
-    "test-watch": "jest --watch",
-    "lint-fix": "eslint --fix  --ext .js src"
+    "server": "node server"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "isomorphic-fetch": "^2.2.1",
     "node-sass": "^4.11.0",
+    "path": "^0.12.7",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router": "^5.0.0",

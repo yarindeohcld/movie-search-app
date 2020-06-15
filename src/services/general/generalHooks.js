@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 
+/**
+ * Debounced value by creating a batch over timeout callback
+ * and clearing after a delay
+ * @param {String} value
+ */
 export const useDebounce = (value) => {
     // State and setters for debounced value
     const [debouncedValue, setDebouncedValue] = useState(value);
@@ -21,6 +26,12 @@ export const useDebounce = (value) => {
     return debouncedValue;
 };
 
+/**
+ * Pagingation custom hook for handeling page counts
+ * and storing currentPage and pagination properties
+ *
+ * @param {Number} count
+ */
 export const usePagination = (count) => {
     const [currentPage, setCurrentPage] = useState(1);
     const maxPage = Math.ceil(count / 10);

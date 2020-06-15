@@ -2,6 +2,11 @@ import { useEffect, useState, useCallback } from 'react';
 import Api from 'containers/Movies/moviesApi';
 import { useDebounce, usePagination } from 'services/general/generalHooks';
 
+/**
+ * A custom hook for handeling fetching movies
+ * by queries and pages, currently handeled by one custom hook.
+ * In the future will be decupled into seperated logics.
+ */
 export const useMovies = () => {
     const [data, setData] = useState();
     const [query, setQuery] = useState('');
@@ -28,7 +33,7 @@ export const useMovies = () => {
         setQueryRequest: useCallback(
             (debouncedQuery) => {
                 setQuery(debouncedQuery);
-                // Clear page state when re searching new title
+                // Clear page state when researching new title
                 setCurrentPage(1);
             },
             [debouncedQuery]

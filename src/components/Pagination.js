@@ -13,10 +13,10 @@ export const Pagination = ({
             <button onClick={() => previousPage()} disabled={isPrev}>
                 {'<'}
             </button>
-            {maxPage && (
-                <React.Fragment>
+            {!!maxPage && (
+                <h3>
                     {currentPage} out of {maxPage}
-                </React.Fragment>
+                </h3>
             )}
             <button onClick={() => nextPage()} disabled={isNext}>
                 {'>'}

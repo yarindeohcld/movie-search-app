@@ -40,5 +40,6 @@ export const useMovies = () => {
         prev,
         isNext,
         isPrev,
+        error: data && data.Error,
     };
 };

@@ -3,6 +3,7 @@ import React from 'react';
 import { useMovies } from 'containers/Movies/moviesHooks';
 import { Pagination } from 'components/Pagination';
 import { MoviesGrid } from './components/MoviesGrid';
+import { Header } from 'components/Header';
 
 export const MoviesView = () => {
     const {
@@ -14,11 +15,11 @@ export const MoviesView = () => {
         prev,
         maxPage,
         currentPage,
+        error,
     } = useMovies();
-
     return (
         <div className="movies-view">
-            Movies View
+            <Header />
             <div className="search">
                 <input
                     placeholder="search"
@@ -27,6 +28,7 @@ export const MoviesView = () => {
                     }}
                 />
             </div>
+            {error && <div className="error">{error}</div>}
             <MoviesGrid movies={movies} />
             <Pagination
                 nextPage={next}

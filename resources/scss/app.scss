@@ -1,19 +1,101 @@
-.app {
-
-  display: flex;
-  flex-direction: column;
-
-  .title {
-    font-size: 30px;
-    padding: 10px;
-  }
-
-  .section {
+.movies-view {
     display: flex;
-    justify-content: center;
-  }
-  
-  p {
-    text-align: center;
-  }
+    flex-direction: column;
+    input {
+        background-color: transparent;
+        border-bottom: 1px solid $main-color;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        color: $main-color;
+        text-transform: uppercase;
+        font-size: 12px;
+        width: 250px;
+        &:focus,
+        &:active,
+        &:visited {
+            outline: none;
+        }
+        &:focus,
+        &:active,
+        &:visited {
+            outline: none;
+        }
+        &::placeholder {
+            text-transform: uppercase;
+            color: $main-color;
+            font-size: 12px;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    }
+    .search, .error {
+        @include center;
+        padding: 10px;
+    }
+    .movie-grid {
+        @include center;
+    }
+    .pagination {
+        @include center;
+    }
+    .movie {
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+        padding: 5px;
+
+        .title {
+            position: absolute;
+            margin-top: 19%;
+            z-index: 99999;
+            color: white;
+            font-size: $body-font-1;
+            font-weight: bold;
+            max-width: 200px;
+            padding-left: 5px;
+        }
+        .movie-tile {
+            position: relative;
+            padding-bottom: 20px;
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .movie-tile::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                    200deg,
+                    rgba(83, 19, 113, 0) 0%,
+                    rgba(83, 19, 113, 0.25) 100%
+                ),
+                linear-gradient(
+                    200deg,
+                    rgba(108, 160, 209, 0.2) 0%,
+                    rgb(98, 156, 212) 97.92%,
+                    rgba(122, 146, 169, 0.7) 100%
+                );
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            content: '';
+        }
+    }
+
+    .movies-grid {
+        // Calc of min 5 tiles of 300 px and padding
+        max-width: 1080px;
+        margin: 0 auto;
+        .photos {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: stretch;
+            padding: 0;
+            max-width: 1080px;
+        }
+    }
 }

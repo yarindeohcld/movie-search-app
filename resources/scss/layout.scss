@@ -1,12 +1,42 @@
 body {
-  background-color: black;
-  color: white;
-  font-size: 14px;
+    background-color: black;
+    font-family: 'DINNextW01-Light';
+    color: $main-color;
+    font-size: 14px;
 }
 
-// #root {
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// }
+* {
+    margin: 0;
+}
+@mixin center {
+    display: flex;
+    justify-content: center;
+}
+
+.main-header {
+    @include center;
+    height: 80px;
+    background-color: $secondary-color;
+    img {
+        height: 80px;
+    }
+}
+
+button {
+    background: transparent;
+    color: $main-color;
+    border: 0;
+    &:hover {
+        color: $secondary-color;
+        border-color: $secondary-color;
+    }
+    &:focus,
+    &:active,
+    &:visited {
+        outline: none;
+    }
+    &:disabled {
+        cursor: not-allowed;
+        color: $disabled;
+    }
+}

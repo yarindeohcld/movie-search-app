@@ -5,8 +5,8 @@ import { MoviesView } from 'containers/Movies/MoviesView';
 
 export const App = () => {
     return (
-        <div>
+        <React.Fragment>
             <MoviesView />
-        </div>
+        </React.Fragment>
     );
 };

@@ -1,16 +1,23 @@
 import React from 'react';
 
 import { useMovies } from 'containers/Movies/moviesHooks';
+import { MoviesGrid } from './components/MoviesGrid';
 
 export const MoviesView = () => {
-    const { movies } = useMovies();
+    const { movies, setQueryRequest } = useMovies();
+    
     return (
-        <div>
+        <div className="movies-view">
             Movies View
-            {movies &&
-                Object.keys(movies).map((key) => (
-                    <div key={`${movies[key].imdbID}`}>{movies[key].Title}</div>
-                ))}
+            <div className="search">
+                <input
+                    placeholder="search"
+                    onChange={(event) => {
+                        setQueryRequest(event.target.value);
+                    }}
+                />
+            </div>
+            <MoviesGrid movies={movies} />
         </div>
     );
 };

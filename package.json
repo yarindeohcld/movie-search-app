@@ -1,7 +1,7 @@
 {
-  "name": "create-react-app-light",
+  "name": "movie-search-app",
   "version": "1.0.0",
-  "description": "create-react-app-light",
+  "description": "movie-search-app",
   "author": "yarindeoh",
   "license": "MIT",
   "scripts": {
@@ -13,19 +13,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "connected-react-router": "^6.5.2",
-    "i18n": "^0.8.3",
     "node-sass": "^4.11.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-redux": "^7.1.0",
-    "react-redux-i18n": "^1.9.3",
     "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "redux": "^4.0.4",
-    "redux-saga": "^1.0.5",
-    "reselect": "^4.0.0",
-    "webpack-api-mocker": "^1.7.6"
+    "react-router-dom": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
@@ -42,7 +34,6 @@
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.7.1",
     "prettier": "^1.19.1",
-    "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.39.1",

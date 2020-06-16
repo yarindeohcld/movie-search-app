@@ -33,6 +33,8 @@ https://movie-search-app-cd.herokuapp.com/
  - Currently this app is stateless, in the future, when adding some states,
    consider caching results in pagination. 
  - Add tests!
+ - Wrap application error in a Modal or Notification component
+ - Handle application and network errors with a shared middleware
  - Finish pixel perfect UI
  - Add env variables for hosting API_URL in private and not as constants.
  
